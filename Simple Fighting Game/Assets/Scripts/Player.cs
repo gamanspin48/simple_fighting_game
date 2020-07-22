@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
 {   
     //0 idle
     //1 left punch
-    //2 right punch
-    //3 left hook
+    //2 left hook
+    //3 right punch
     //4 right hook
     //5 combo attack
     //6 elbow attack

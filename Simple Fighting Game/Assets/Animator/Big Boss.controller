@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8707657694077132450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45605b384b112240a143a5cc09f2c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &-7360020593907312872
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -25,19 +37,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &-6831121593085282491
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e89df1f2d82b64d857d3e27a9fdf72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
 --- !u!114 &-6147283450468994390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,6 +50,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
+--- !u!114 &-5177719791086348439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e89df1f2d82b64d857d3e27a9fdf72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 3
 --- !u!1101 &-3449621943216685603
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -76,6 +88,19 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-3397836448617695305
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e89df1f2d82b64d857d3e27a9fdf72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 4
 --- !u!1101 &-3040183303660574748
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -108,13 +133,13 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: left hook
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2460355115789433999}
   m_StateMachineBehaviours:
-  - {fileID: 8628597143303692828}
+  - {fileID: -2126579356657338034}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -130,7 +155,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-2542326834395104882
+--- !u!114 &-2126579356657338034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e89df1f2d82b64d857d3e27a9fdf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 2
 --- !u!1102 &-1232485034200441553
 AnimatorState:
   serializedVersion: 5
@@ -150,7 +175,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: left punch
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -179,13 +204,13 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: right hook
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7360020593907312872}
   m_StateMachineBehaviours:
-  - {fileID: -2542326834395104882}
+  - {fileID: -3397836448617695305}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -254,6 +279,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &1405672693890030086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac407fefc3cf054fa4b78ed78f9001a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &2460355115789433999
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -286,7 +323,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -314,13 +351,13 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: right punch
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -565520851030923149}
   m_StateMachineBehaviours:
-  - {fileID: -6831121593085282491}
+  - {fileID: -5177719791086348439}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -396,7 +433,7 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3071323914931619566}
---- !u!114 &8628597143303692828
+--- !u!114 &5792148173636135004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +442,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e89df1f2d82b64d857d3e27a9fdf72, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d5b79ecc53f6464fad0d91da1286061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
