@@ -27,13 +27,23 @@ public class Ai : MonoBehaviour
     }
 
     public void Hitted(int state){
-        Debug.Log("hitted "+state);
-        float rand = Random.Range(0.0f, 1.0f);
-        Debug.Log(rand);
-        if (rand > 0.0f && rand <= 0.2f)
-            isBlocking = true;
-        animator.SetInteger(PARAM_STATE,state);
-        animator.SetBool(PARAM_BLOCK,isBlocking);
+        // Debug.Log("hitted "+state);
+        if (state > 1){
+            float rand = Random.Range(0.0f, 1.0f);
+            // Debug.Log(rand);
+            if (rand > 0.0f && rand <= 0.5f)
+                animator.SetInteger(PARAM_STATE,5);
+            else
+                animator.SetInteger(PARAM_STATE,8);
+        }else{
+             float rand = Random.Range(0.0f, 1.0f);
+            // Debug.Log(rand);
+            if (rand > 0.0f && rand <= 0.2f)
+                isBlocking = true;
+            animator.SetInteger(PARAM_STATE,state);
+            animator.SetBool(PARAM_BLOCK,isBlocking);
+        }
+       
         
     }
 
